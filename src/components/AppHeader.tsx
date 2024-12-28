@@ -1,22 +1,8 @@
+
 import {
-  Command,
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-  CommandShortcut,
-} from "@/components/ui/command";
-import {
-  Calculator,
-  Calendar,
-  CreditCard,
+
   Search,
-  Settings,
-  Smile,
-  User,
+
 } from "lucide-react";
 import { Input } from "./ui/input";
 import { AppBreadcrumb } from "./BreadCrumbs";

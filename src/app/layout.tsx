@@ -3,7 +3,7 @@ import { Vazirmatn } from "next/font/google";
 import "./globals.css";
 import ProvidersLayout from "@/components/layouts/Providers";
 import { MainLayout } from "@/components/layouts/MainLayout";
-import { AppHeader } from "@/components/AppHeader";
+
 
 const vazirMatn = Vazirmatn({
   variable: "--font-vazir",
