@@ -4,7 +4,9 @@ import { cn } from "@/lib/utils";
 
 const Input = React.forwardRef<
   HTMLInputElement,
-  React.ComponentProps<"input"> & { icon: any }
+  React.ComponentProps<"input"> & {
+    icon: React.ReactNode;
+  }
 >(({ className, type, icon, ...props }, ref) => {
   return (
     <div
