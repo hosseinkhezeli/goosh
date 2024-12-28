@@ -17,6 +17,7 @@ const Input = forwardRef<
       {icon}
       <input
         {...props}
+        type={type}
         ref={ref}
         className="w-full p-1 placeholder:text-muted-foreground placeholder:text-gray-300 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
       />
