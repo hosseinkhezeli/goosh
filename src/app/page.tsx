@@ -43,7 +43,7 @@ export default function Home() {
           <Plus />
         </Button>
       </div>
-      <div className='grid gap-4 grid-cols-2'>
+      <div className='grid gap-4 grid-cols-2 md:grid-cols-3 xl:grid-cols-4'>
         {briefInfo.map((info) => {
           return (
             <DashboardCard key={info.label} label={info.label} icon={info.icon}>

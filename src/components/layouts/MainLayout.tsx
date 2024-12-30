@@ -1,6 +1,5 @@
-import { AppHeader } from "../AppHeader";
-import { AppSidebar } from "../AppSidebar";
-import { SidebarTrigger } from "../ui/sidebar";
+import { AppHeader } from '../AppHeader';
+import { AppSidebar } from '../AppSidebar';
 
 export function MainLayout({
   children,
@@ -10,8 +9,8 @@ export function MainLayout({
   return (
     <>
       <AppSidebar />
-      <div className="flex flex-col w-full">
-        <header className="w-full ">
+      <div className='flex flex-col w-full'>
+        <header className='w-full '>
           <AppHeader />
         </header>
         <main>{children}</main>
