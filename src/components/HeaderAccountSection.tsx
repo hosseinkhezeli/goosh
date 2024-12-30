@@ -14,7 +14,7 @@ export function HeaderAccountSection() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex">
-        <DropdownMenuLabel className="font-normal text-sm">
+        <DropdownMenuLabel className="font-light text-xs">
           سینا فدوی
         </DropdownMenuLabel>
         <Avatar className="w-8 h-8">

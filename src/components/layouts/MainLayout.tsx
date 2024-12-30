@@ -1,6 +1,6 @@
 import { AppHeader } from "../AppHeader";
 import { AppSidebar } from "../AppSidebar";
-// import { SidebarTrigger } from "../ui/sidebar";
+import { SidebarTrigger } from "../ui/sidebar";
 
 export function MainLayout({
   children,
@@ -14,10 +14,7 @@ export function MainLayout({
         <header className="w-full ">
           <AppHeader />
         </header>
-        <main>
-          {/* <SidebarTrigger /> */}
-          {children}
-        </main>
+        <main>{children}</main>
       </div>
     </>
   );
