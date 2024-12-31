@@ -14,7 +14,7 @@ export function AppHeader() {
         placeholder="جست و جو ..."
         className="w-52 hidden sm:flex"
         icon={
-          <Search strokeWidth={1.5} width={18} className="stroke-gray-400" />
+          <Search strokeWidth={1.5} width={18} className="stroke-neutral-400" />
         }
       />
       <SidebarTrigger  className="block sm:hidden"/>

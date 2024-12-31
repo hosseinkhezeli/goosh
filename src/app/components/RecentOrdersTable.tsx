@@ -70,7 +70,7 @@ export function RecentOrdersTable() {
               </Avatar>
               <div className='flex flex-col gap-1'>
                 <span>{row.original.brandName}</span>
-                <span className='text-xs text-gray-400 '>
+                <span className='text-xs text-neutral-400 '>
                   {row.original.email}
                 </span>
               </div>
