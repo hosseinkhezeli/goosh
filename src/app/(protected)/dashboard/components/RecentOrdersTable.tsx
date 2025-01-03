@@ -1,26 +1,18 @@
 'use client';
 
-import Toman from '../../../public/toman.svg';
+import Toman from '@/app/assets/icons/toman.svg';
 import {
   ColumnDef,
-  flexRender,
   getCoreRowModel,
   useReactTable,
 } from '@tanstack/react-table';
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Image from 'next/image';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { ReactNode, useMemo } from 'react';
 import { Badge } from '@/components/ui/badge';
+import { GooshTable } from '@/components/GooshTable';
 
 type TRecentOrder = {
   brandName: string;
@@ -54,7 +46,6 @@ const data = [
 ];
 export function RecentOrdersTable() {
   const isMobile = useIsMobile();
-  console.log(isMobile);
 
   const columns: ColumnDef<TRecentOrder>[] = useMemo(
     () => [
@@ -142,50 +133,5 @@ export function RecentOrdersTable() {
     },
   });
 
-  return (
-    <div className='rounded-md border'>
-      <Table>
-        <TableHeader>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
-                return (
-                  <TableHead key={header.id} className='text-right'>
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
-                  </TableHead>
-                );
-              })}
-            </TableRow>
-          ))}
-        </TableHeader>
-        <TableBody>
-          {table.getRowModel().rows?.length ? (
-            table.getRowModel().rows.map((row) => (
-              <TableRow
-                key={row.id}
-                data-state={row.getIsSelected() && 'selected'}
-              >
-                {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id}>
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </TableCell>
-                ))}
-              </TableRow>
-            ))
-          ) : (
-            <TableRow>
-              <TableCell colSpan={columns.length} className='h-24 text-center'>
-                No results.
-              </TableCell>
-            </TableRow>
-          )}
-        </TableBody>
-      </Table>
-    </div>
-  );
+  return <GooshTable table={table} key={'recent-orders'} />;
 }
