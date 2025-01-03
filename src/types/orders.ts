@@ -9,4 +9,6 @@ export type TOrder = {
   isHandled: boolean;
   planId: string;
   planName: string;
+  createdOn: Date | string;
+  status: string;
 };
