@@ -14,7 +14,7 @@ export function OrderDialog({ open, onOpenChange }: TOrderDialogProps) {
   const searchParams = useSearchParams();
   const selectedOrder = ordersMock?.[Number(searchParams.get('order_id')) || 0];
   const orderForm = useForm<z.infer<typeof orderFormSchema>>({
-    defaultValues: selectedOrder
+    // defaultValues: selectedOrder,
   });
 
   return (

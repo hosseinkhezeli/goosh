@@ -2,8 +2,7 @@ import { ReactNode } from 'react';
 import { Form, UseFormReturn } from 'react-hook-form';
 import { z } from 'zod';
 import { IInputProps } from './types';
-import { TextInput } from './components/TextInput';
-import { PhoneInput } from './components/PhoneInput';
+
 
 export type TFormCreator<T extends z.ZodType> = {
   form: UseFormReturn<z.infer<T>>;
@@ -23,8 +22,8 @@ export function FormCreator<T extends z.ZodType>({
   );
 }
 
-const InputList = {
-  text: TextInput,
-  phone: PhoneInput,
-  
-};
+// const InputList = {
+//   text: TextInput,
+//   phone: PhoneInput,
+
+// };

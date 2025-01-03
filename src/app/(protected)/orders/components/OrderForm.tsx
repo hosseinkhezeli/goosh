@@ -96,7 +96,19 @@ export function OrderForm({ form }: TOrderForm) {
               <FormField
                 key={input.name}
                 control={form.control}
-                name={input.name}
+                name={
+                  input.name as
+                    | 'address'
+                    | 'brandName'
+                    | 'brandProfilePic'
+                    | 'brandModel'
+                    | 'phoneNumber'
+                    | 'email'
+                    | 'isHandled'
+                    | 'planId'
+                    | 'createdOn'
+                    | 'status'
+                }
                 render={({ field }) => (
                   <FormItem className='w-11/12  max-w-72'>
                     <FormLabel className='text-xs'>{input.label}</FormLabel>
@@ -105,6 +117,7 @@ export function OrderForm({ form }: TOrderForm) {
                         className='w-full'
                         placeholder='example@gmail.com'
                         {...field}
+                        value={field.value?.toString() ?? ''}
                       />
                     </FormControl>
                     <FormMessage />
