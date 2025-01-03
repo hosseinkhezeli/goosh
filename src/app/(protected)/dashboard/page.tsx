@@ -6,8 +6,8 @@ import {
   ShoppingCart,
   Users,
 } from 'lucide-react';
-import { DashboardCard } from '../../components/DashboardCard';
-import { RecentOrdersTable } from '../../components/RecentOrdersTable';
+import { DashboardCard } from './components/DashboardCard';
+import { RecentOrdersTable } from './components/RecentOrdersTable';
 
 export default function Home() {
   const briefInfo = [
